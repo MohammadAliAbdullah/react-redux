@@ -1,10 +1,17 @@
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+  // const dispatch = useDispatch();
+  const nameReducer = useSelector((state) => state.nameReducer);
+  const { firstName, lastName, message } = nameReducer;
+
   return (
     <div>
       <div className="jumbotron text-center" style={{ marginBottom: 0 }}>
-        <h1>React Redux</h1>
-        <p>Resize this responsive page to see the effect!</p>
+        <h1>React Redux </h1>
+        <p>Redux is a powerfull library.</p>
+        <p>{firstName}</p>
       </div>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
         <a className="navbar-brand" href="#">Navbar</a>
@@ -69,7 +76,6 @@ function App() {
         <p>Footer</p>
       </div>
     </div>
-
   );
 }
 
