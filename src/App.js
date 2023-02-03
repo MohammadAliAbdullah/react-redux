@@ -1,10 +1,21 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { updateFirstName, updateLastName } from "./redux/actions";
 
 function App() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const nameReducer = useSelector((state) => state.nameReducer);
   const { firstName, lastName, message } = nameReducer;
+
+  const handleFirstName = () => {
+    dispatch(updateFirstName("Jason"));
+  };
+  const handleLastName = () => {
+    dispatch(updateLastName("Stathan"));
+  };
+  const handleReset = () => {
+    dispatch({ type: "", action: {} });
+  };
 
   return (
     <div>
@@ -59,16 +70,33 @@ function App() {
           </div>
           <div className="col-sm-8">
             <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div className="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            <br />
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div className="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <React.Fragment>
+              <div className="container">
+                <label>First Name : {firstName}</label>
+                <button onClick={handleFirstName}>Update First Name</button>
+                <br />
+                <br />
+                <label>Last Name : {lastName}</label>
+                <button type="submit" onClick={handleLastName}>
+                  Update First Name
+                </button>
+
+                <br />
+                <br />
+                <br />
+                {message && (
+                  <label style={{ background: "lightgreen" }}>{message}</label>
+                )}
+                <br />
+                <button
+                  style={{ background: "red" }}
+                  type="submit"
+                  onClick={handleReset}
+                >
+                  Reset
+                </button>
+              </div>
+            </React.Fragment>
           </div>
         </div>
       </div>
