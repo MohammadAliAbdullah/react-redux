@@ -8,7 +8,6 @@ function App() {
   const dispatch = useDispatch();
   const nameReducer = useSelector((state) => state.nameReducer);
   const { firstName, lastName, message } = nameReducer;
-  const [fName, setfName] = useState("");
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
