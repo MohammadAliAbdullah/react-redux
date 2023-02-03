@@ -29,27 +29,11 @@ function App() {
       <div className="jumbotron text-center" style={{ marginBottom: 0 }}>
         <h1>React Redux </h1>
         <p>React Redux is a library that allows React developers to use the Redux state management library with their React applications. It provides a set of hooks and utilities that make it easier to connect React components to the Redux store and manage state updates.</p>
-        <p>{firstName}</p>
+        <p></p>
       </div>
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a className="navbar-brand" href="#">Navbar</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div className="bg-secondary text-center" style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>
+        {firstName} || {lastName} 
+      </div>
       <div className="container" style={{ marginTop: 30 }}>
         <div className="row">
           <div className="col-sm-4">
@@ -100,7 +84,7 @@ function App() {
           </div>
         </div>
       </div >
-      <div className="jumbotron" style={{ marginBottom: 0, textAlign: 'left'}}>
+      <div className="jumbotron" style={{ marginBottom: 0, textAlign: 'left' }}>
         <h5>workflow : </h5>
         Here is a simplified workflow of how React Redux works:
 
@@ -118,6 +102,12 @@ function App() {
         <br />
         <br />
         React Redux provides several tools and utilities, such as the useSelector and useDispatch hooks, that make it easier to connect React components to the Redux store and manage state updates. This makes it a popular choice for managing the state of React applications.
+
+        <br />
+        <br />
+        <div className='text-center'>
+          MADE BY:  <a href='https://github.com/MohammadAliAbdullah' target="_blank"> Mohammad Ali Abdullah</a>
+        </div>
       </div>
     </div >
   );
