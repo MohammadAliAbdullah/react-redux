@@ -1,7 +1,8 @@
 # react-redux
 
 ```
-React Redux is a library that allows React developers to use the Redux state management library with their React applications. It provides a set of hooks and utilities that make it easier to connect React components to the Redux store and manage state updates.
+React Redux is a library that allows React developers to use the Redux state management library with their React applications.
+It provides a set of hooks and utilities that make it easier to connect React components to the Redux store and manage state updates.
 ```
 ### workflow:
 
