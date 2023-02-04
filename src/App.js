@@ -31,7 +31,7 @@ function App() {
         <p></p>
       </div>
       <div className="bg-secondary text-center" style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>
-        {firstName} || {lastName} 
+        {firstName} || {lastName}
       </div>
       <div className="container" style={{ marginTop: 30 }}>
         <div className="row">
